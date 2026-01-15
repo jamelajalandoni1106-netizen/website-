@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ﾌﾌﾑﾶﾶ.com</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- You can also seperate each components to a another css style -->
+        <!-- Atleast this way it's more organized -->
+        <link rel="stylesheet" href="CSS/Banner.css">
+        <link rel="stylesheet" href="CSS/IndexStyle.css">
+        <link rel="stylesheet" href="CSS/MainStyle.css">
+        <link rel="stylesheet" href="CSS/HeaderSidebarStyle.css">
+        <link rel="stylesheet" href="CSS/AddToCart.css">
+        <link rel="stylesheet" href="CSS/shirt.css">
+        <script type="text/javascript" src="ItemInventory.js"></script>
+        <script type="text/javascript" src="addtocart.js"></script>
+
+    </head>
+    <body>
+        <!-- You can add multiple classes to one tag by seperating each with a space -->
+        <!-- for example: class="cssClass1 cssClass2 cssClass3" -->
+        
+
+        <!-- Sidebar Component --> 
+        <div id="sidebar" class="sidebar">
+            <div class="header">
+                <h2>ﾌﾌﾑﾶﾶ COMMISSION</h2>
+            </div>
+
+            <!-- Add groups by adding a new "section" tag -->
+            <div class="sidebar-item-holder">
+                <section>
+                    <h3 id="group-name">Categories</h3>
+                    <a href="headshot.html">HeadShot</a>
+                    <a href="bustup.html">Bust-Up</a>
+                    <a href="halfbody.html">Half-Body</a>
+                    <a href="sketch.html">Sketch</a>
+                </section>
+
+                <br><hr> <!-- This will serve as a seperator for each group -->
+                <section>
+                    <h3 id="group-name">HOW TO ORDER</h3>
+                    <a href="https://www.facebook.com/profile.php?id=61577614875760">ﾌﾌﾑﾶﾶ</a>
+                    <a href="https://forms.gle/iN9pZwgLQyyfnsFC7">COMMISSION Form</a>
+                </section>
+            </div>
+        </div>
+
+
+        <!-- Header Component -->
+         <header class="Web-Header">
+            <div class="align-center" style="gap: 30px">
+                <img src="Images/Sidebar.svg" width="25px" id="sidebarButton" onclick="ToggleSidebar();">
+                <a href="Index.html">On Sale</a>
+                <a href="About.html">About</a>
+            </div>
+
+            <h2 class="Logo"><a href="Index - Copy.html">ﾌﾌﾑﾶﾶ</a></h2>
+
+            <div class="details align-center" style="gap: 25px; margin-left: 34px;">
+                <div class="search-input">
+                    <input id="searchBar" type="text" placeholder="Search..." 
+                        oninput="updateSearchResults()" 
+                        onfocusout="hideSearchResult()" 
+                        onfocusin="updateSearchResults()">
+                    <div class="search-result-modal hideSearch" id="search-result">
+                    </div>
+                </div>
+            </div>
+                <div class="Shoppingcart">
+                    
+                </div>
+         </header>
+
+        <div class="container">
+            <div class="about1">
+            <h1 style="padding-left: 890px;">ﾌﾌﾑﾶﾶ</h1>
+            <img src="Untitled design.jpg" style="padding-left: 35%;"> 
+            <p style="padding-left: 855px;">Freelance digital Artist.</p>
+        </div>  
+        
+        </div>
+           
+
+        <!-- Insert and create footer that will be appealing for all HTML pages -->
+        <footer>
+            <h2><a href="Index.html">ﾌﾌﾑﾶﾶ</a></h2>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61577614875760"><i class='bx bxl-facebook-square'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61577614875760"><i class='bx bxl-gmail'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61577614875760"><i class='bx bxl-instagram-alt'></i></a>
+            </div>
+            <div class="page-links">
+                <a href="Index.html">Home</a>
+                <a href="About.html">About</a>
+                <a href="About.html">Services</a>
+                <a href="https://www.facebook.com/profile.php?id=61577614875760">Blog</a>
+                <a href="https://www.facebook.com/profile.php?id=61577614875760">Contact</a>
+            </div>
+            <p>© 2026 All rights reserved. </p>
+        </footer>
+
+        <!-- An abosulte position button that will make the website scroll to the very top -->
+        <p class="goUp" onclick="goUp()"><i class='bx bx-chevrons-up'></i></p>
+
+        </main>
+
+        <script src="logic.js"></script>
+        <script src="Banner.js"></script>
+        <script type="text/javascript">
+            displayProduct([], document.getElementById("popular-item-holder"))
+        </script>
+        </div>
+    </body>
+</html>
